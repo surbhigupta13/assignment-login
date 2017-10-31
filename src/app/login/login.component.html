@@ -1,0 +1,15 @@
+
+<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+  <div class="group">
+    <input type="text" [(ngModel)]="loginForm.userName" name="username" #username="ngModel" placeholder="Username" required><span class="highlight"></span><span class="bar"></span>
+    <label>Username</label>
+  </div>
+  <div class="group">
+    <input type="password" [(ngModel)]="loginForm.password" name="password" #password="ngModel" placeholder="Password" required><span class="highlight"></span><span class="bar"></span>
+    <label>Password</label>
+    <p *ngIf="errorMsg" class="errormsg">{{errorMsg}}</p>
+  </div>
+  <button type="submit" class="button buttonBlue">Login
+    <div class=" "><span class=""></span></div>
+  </button>
+</form>
